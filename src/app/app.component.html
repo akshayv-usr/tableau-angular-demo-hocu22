@@ -1,0 +1,33 @@
+<div fxLayout="row wrap" fxLayoutGap="10px">
+  <mat-card fxFlex="49">
+    <div *ngIf="showViz">
+      <div #viz id="tableauViz"></div>
+
+    </div>
+  </mat-card>
+  <mat-card fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="10px" fxFlex>
+      <mat-form-field fxFlex="100">
+          <input #textbox matInput placeholder="Tableau URL" [value]="url" [(ngModel)]="url" fxFlex>
+        </mat-form-field>
+    <div fxLayout="column wrap" fxLayoutAlign="start start" fxLayoutGap="10px" fxFlex>
+
+      <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="10px">
+        <button mat-raised-button color="accent" (click)="changeViz($event, textbox.value)">Change Viz</button>
+        <button mat-raised-button color="accent" (click)="showCategory($event)">Product Categories</button>
+      </div>
+      <div #details id="markDetails"></div>
+    </div>
+<div>
+
+</div>
+  </mat-card>
+</div>
+<mat-card>
+    <div>
+        <h3>Sample worksheet links</h3>
+        <p><em>Copy and paste the URL in input filed above and click Chnage Viz. Clicking on Product Categories will change the viz to at bar chart.</em></p>
+        <div><b>Combination Chart: </b>https://public.tableau.com/views/USSuperstoreDashboard_46/SalesvsDiscountbyMonth?:embed=y&:display_count=yes</div>
+        <div><b>By State (map): </b> https://public.tableau.com/shared/96WP3TJ2K?:display_count=yes</div>
+        <div> <b>Department and Category:</b> https://public.tableau.com/shared/PMN4XMSQ4?:display_count=yes</div>
+      </div>
+</mat-card>
