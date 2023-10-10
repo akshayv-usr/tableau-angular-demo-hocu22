@@ -8,7 +8,7 @@
     "zone.js": "0.8.26",
     "tableau-api": "2.2.2",
     "@angular/cdk": "6.2.1",
-    "@angular/core": "6.0.0",
+    "@angular/core": "10.2.5",
     "@angular/forms": "6.0.0",
     "@covalent/core": "2.0.0-beta.1",
     "@angular/common": "6.0.0",
